@@ -67,7 +67,7 @@
     (concat special unnamed)))
 
 (defn assign-roles [game]
-  (let [people (.people game)
+  (let [people (shuffle (.people game))
         roles (add-twins (add-lancelot (.roles game)))
         blue (assign-team good :good roles (count people))
         red (assign-team bad :bad roles (count people))]
